@@ -1,0 +1,96 @@
+﻿h3 {
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+body {
+
+	background-image: url("images/background.png");
+	background-repeat: repeat;
+	background-position: -10px;
+}
+
+input[readonly] {
+	
+	width: 100px;
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+input {
+
+	width: 80px;
+	text-align: left;
+	font-size: 20px;
+	margin-bottom: 10px;
+	border: 1px solid #ccc;
+}
+
+button {
+
+	padding: 5px 10px;
+	font-size: 16px;
+	margin: 0 5px;
+	cursor: pointer;
+	background-color: #ffffff;
+}
+
+.container {
+	
+	width: 100%;
+	height: 450px;
+	font-size: 0px;
+	padding-top: 20px;
+}
+
+.player-panel {
+
+	width: 33%;
+	display: inline-block;
+	background-color: #131115;
+	font-size: 16px;
+	border: 2px solid #e29349;
+}
+
+.player-elements {
+
+	margin: auto;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.button-panel {
+
+	margin: auto;
+	text-align: center;
+	display: inline-block;
+
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+}
+
+#misc-panel {
+
+	width: 30%;
+	display: inline-block;
+	background-color: #131115;
+	font-size: 16px;
+}
+
+#title-bar { 
+	margin: auto; 
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+	text-align: center;
+	background-color: #131115;
+	border: 2px solid #e29349;
+}

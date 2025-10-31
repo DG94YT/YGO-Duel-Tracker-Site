@@ -1,0 +1,12 @@
+# IDE/project files
+*.sln
+*.suo
+*.log
+
+# Other
+.vc/
+release/
+
+# OS-specific
+.DS_Store
+Thumbs.db

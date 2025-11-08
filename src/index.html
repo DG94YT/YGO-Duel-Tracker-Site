@@ -5,10 +5,11 @@
     <meta charset="utf-8" />
     <title>Yu-Gi-Oh! Duel Tracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png"
 </head>
 <body>
     <div id="title-bar">
-        <h1 style="color: #e29349;">Yu-Gi-Oh! Duel Tracker v0.1</h1>
+        <h1 style="color: #e29349;">Yu-Gi-Oh! Duel Tracker</h1>
     </div>
     <div class="container">
         <div class="player-panel">
@@ -17,14 +18,14 @@
                 <form onsubmit="return false;">
                     <label style="color: #e29349;" for="player1LP">Current LP</label><br>
                     <input type="text" id="player1LP" value="8000" readonly><br><br>
-                    <p style="color: #e29349;">Life Points Control</p><br>
+                    <p style="color: #e29349;">Life Points Control</p>
                     <div class="button-panel">
-                        <button id="btn1000" type="button" onclick="modifyLP('player1LP', 1000)">-1000</button>
-                        <button id="btn500" type="button" onclick="modifyLP('player1LP', 500)">-500</button>
-                        <button id="btn100" type="button" onclick="modifyLP('player1LP', 100)">-100</button>
-                        <button id="btn50" type="button" onclick="modifyLP('player1LP', 50)">-50</button>
-                        <br>
-                        <label style="color: #e29349;" for "customNum">Custom number</label><br>
+                        <button class="btn1000" type="button" onclick="modifyLP('player1LP', 1000)">-1000</button>
+                        <button class="btn500" type="button" onclick="modifyLP('player1LP', 500)">-500</button>
+                        <button class="btn100" type="button" onclick="modifyLP('player1LP', 100)">-100</button>
+                        <button class="btn50" type="button" onclick="modifyLP('player1LP', 50)">-50</button>
+                        <br><br>
+                        <label id="customP1" style="color: #e29349; font-weight: bold;" for "customNum">Custom number (-)</label><br>
                         <input type="number" id="customNum" value="0" min="0">
                         <button id="btnCustom" type="button" onclick="customLP('player1LP', 'customNum')">Confirm</button><br>
                         <button id="btnResetLP" type="button" onclick="resetLP('player1LP')">Reset Player 1 LP</button>
@@ -33,10 +34,28 @@
             </div>
         </div>
         <div id="misc-panel">
-            <h3 style="color: #e29349;">Misc Panel</h3>
+            <h3 style="color: #e29349;">Duel Tools</h3>
+            <div id="coin-panel">
+                <h3 style="color: #131115;">Coin Toss</h3>
+                <div id="pretoss">
+                    <p style="color: #13115;">Call Heads or Tails</p>
+                    <div id="coin-buttons">
+                        <button id="coin-button" type="button"></button>
+                        <button id="coin-button2" type="button"></button><br>
+                        <button type="button" onclick="closePanel('coin-panel');">Cancel</button>
+                    </div>
+                    <!-- Buttons and stuff.  -->
+                </div>
+                <div id="tossing" style="display:none;">
+                </div>
+            </div>
+            <div id="die-panel">
+                <h3 style="color: #131115;">Die Roll</h3>
+            </div>
             <div class="player-elements">
-                <button id="btnToss" type="button">Toss Coin</button>
+                <button id="btnToss" type="button" onclick="openPanel('coin-panel')">Toss Coin</button>
                 <button id="btnRoll" type="button">Roll Die</button>
+                <button id="btnToggleAdd" type="button" onclick="toggleAdd()">Toggle Add/Sub</button>
                 <button id="btnFullReset" type="button" onclick="resetAllLP('player1LP','player2LP')">Reset All LP</button>
             </div>
         </div>
@@ -46,16 +65,16 @@
                 <form>
                     <label style="color: #e29349;" for="player2LP">Current LP</label><br>
                     <input type="text" id="player2LP" value="8000" readonly><br>
-                    <p style="color: #e29349;">Life Points Control</p><br>
+                    <p style="color: #e29349;">Life Points Control</p>
                     <div class="button-panel">
-                        <button id="btn1000" type="button" onclick="modifyLP('player2LP', 1000)">-1000</button>
-                        <button id="btn500" type="button" onclick="modifyLP('player2LP', 500)">-500</button>
-                        <button id="btn100" type="button" onclick="modifyLP('player2LP', 100)">-100</button>
-                        <button id="btn50" type="button" onclick="modifyLP('player2LP', 50)">-50</button>
-                        <br>
-                        <label style="color: #e29349;" for "customNum">Custom number</label><br>
-                        <input type="number" id="customNum" value="0" min="0">
-                        <button id="btnCustom" type="button" onclick="customLP('player2LP', 'customNum')">Confirm</button><br>
+                        <button class="btn1000" type="button" onclick="modifyLP('player2LP', 1000)">-1000</button>
+                        <button class="btn500" type="button" onclick="modifyLP('player2LP', 500)">-500</button>
+                        <button class="btn100" type="button" onclick="modifyLP('player2LP', 100)">-100</button>
+                        <button class="btn50" type="button" onclick="modifyLP('player2LP', 50)">-50</button>
+                        <br><br>
+                        <label id="customP2" style="color: #e29349; font-weight: bold;" for "customNum2">Custom number (-)</label><br>
+                        <input type="number" id="customNum2" value="0" min="0">
+                        <button id="btnCustom" type="button" onclick="customLP('player2LP', 'customNum2')">Confirm</button><br>
                         <button id="btnResetLP" type="button" onclick="resetLP('player2LP')">Reset Player 2 LP</button>
                     </div>
                 </form>

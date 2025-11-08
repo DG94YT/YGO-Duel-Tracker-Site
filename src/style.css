@@ -5,6 +5,14 @@
 	padding-bottom: 10px;
 }
 
+p {
+
+	margin: auto;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
 body {
 
 	background-image: url("images/background.png");
@@ -75,6 +83,60 @@ button {
 	padding-left: 5px;
 	padding-right: 5px;
 	padding-bottom: 5px;
+}
+
+#coin-button {
+
+	background-image: url(images/coin/heads.png);	
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	margin-left: 0 auto;
+	border: none;
+	height: 96px;
+	width: 96px;
+}
+
+#coin-button2 {
+
+	background-image: url(images/coin/tails.png);	
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: 0px center;
+	margin-left: 0 auto;
+	border: none;
+	height: 96px;
+	width: 96px;
+}
+
+#coin-buttons {
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+#coin-panel {
+
+	position: fixed;
+	top: 130px;
+	width: 396px;
+	height: 215px;
+	margin: auto;
+	background: #e29349;
+	display: none;
+}
+
+#die-panel {
+
+	position: fixed;
+	top: 150px;
+	width: 396px;
+	height: 200px;
+	margin: auto;
+	background: #e29349;
+	display: none;
 }
 
 #misc-panel {
